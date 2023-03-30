@@ -72,9 +72,9 @@ export const convertWebp50 = async (req, res) =>{
         // ELIMINANDO BUFFER DEL SERVIDOR
         fs.remove(image.tempFilePath)
         // SUBIENDO IMAGEN A CLOUDINARY
-        const uploadedImage = await uploadImage(dirname + `/${nameImage}.${format}`)
+        const uploadedImage = await uploadImage(__dirname + `/${nameImage}.${format}`)
         // ELIMINADO IMAGEN WEBP DEL SERVIDOR
-        const deleteImg = await fs.remove(dirname + `/${nameImage}.${format}`)
+        const deleteImg = await fs.remove(__dirname + `/${nameImage}.${format}`)
         if(uploadedImage){
         res.json({
           nameImage: nameImage,
@@ -109,9 +109,9 @@ export const convertWebp50 = async (req, res) =>{
         // ELIMINANDO BUFFER DEL SERVIDOR
         fs.remove(image.tempFilePath)
         // SUBIENDO IMAGEN A CLOUDINARY
-        const uploadedImage = await uploadImage(dirname + `/${nameImage}.${format}`)
+        const uploadedImage = await uploadImage(__dirname + `/${nameImage}.${format}`)
         // ELIMINADO IMAGEN WEBP DEL SERVIDOR
-        const deleteImg = await fs.remove(dirname + `/${nameImage}.${format}`)
+        const deleteImg = await fs.remove(__dirname + `/${nameImage}.${format}`)
         if(uploadedImage){
         res.json({
           nameImage: nameImage,
@@ -146,9 +146,9 @@ export const convertWebp50 = async (req, res) =>{
         // ELIMINANDO BUFFER DEL SERVIDOR
         fs.remove(image.tempFilePath)
         // SUBIENDO IMAGEN A CLOUDINARY
-        const uploadedImage = await uploadImage(dirname + `/${nameImage}.${format}`)
+        const uploadedImage = await uploadImage(__dirname + `/${nameImage}.${format}`)
         // ELIMINADO IMAGEN WEBP DEL SERVIDOR
-        const deleteImg = await fs.remove(dirname + `/${nameImage}.${format}`)
+        const deleteImg = await fs.remove(__dirname + `/${nameImage}.${format}`)
         if(uploadedImage){
         res.json({
           nameImage: nameImage,
@@ -183,9 +183,9 @@ export const convertWebp50 = async (req, res) =>{
         // ELIMINANDO BUFFER DEL SERVIDOR
         fs.remove(image.tempFilePath)
         // SUBIENDO IMAGEN A CLOUDINARY
-        const uploadedImage = await uploadImage(dirname + `/${nameImage}.${format}`)
+        const uploadedImage = await uploadImage(__dirname + `/${nameImage}.${format}`)
         // ELIMINADO IMAGEN WEBP DEL SERVIDOR
-        const deleteImg = await fs.remove(dirname + `/${nameImage}.${format}`)
+        const deleteImg = await fs.remove(__dirname + `/${nameImage}.${format}`)
         if(uploadedImage){
         res.json({
           nameImage: nameImage,
@@ -227,7 +227,7 @@ export const convertWebpResize50 = (req, res) => {
     .then( async (data) => {
         const response = await sharp(data).toFile(`server/public/converted/${nameImage}.webp`);
         fs.remove(image.tempFilePath)
-        const uploadedImage = await uploadImage(dirname + `/${nameImage}.webp`)
+        const uploadedImage = await uploadImage(__dirname + `/${nameImage}.webp`)
         if(uploadedImage){
         res.send(`<a href="${uploadedImage.secure_url}">Descargar imagen comprimida</a>`)
         }
