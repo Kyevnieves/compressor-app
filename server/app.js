@@ -15,7 +15,7 @@ export const app = express();
 app.use(express.static('server/public'))
 // USANDO EJS COMO MOTOR DE PLANTILLAS 
 app.set('view engine', 'ejs');
-app.set('views', dirname + '/views');
+app.set('views', __dirname + '/views');
 /////////////////////////////////////////////
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan("dev"));
