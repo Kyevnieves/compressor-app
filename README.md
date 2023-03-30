@@ -36,5 +36,8 @@ La aplicación requerirá que el usuario inicie sesión con un nombre de usuario
 
 La sesión del usuario se maneja utilizando cookies.
 Los usuarios se guardan en una BD mongo
+
+NOTA: En mi caso yo hice deploy en Render. Tienes que configurar la Whitelist de MongoDb para que acepte o todas las IP o la direccion IP de donde esta alojado tu servicio. Por temas de seguridad.
+
 Contribuir
 Si desea contribuir a este proyecto, no dude en enviar una solicitud de extracción. Estaré encantado de revisar y fusionar cualquier adición útil.
