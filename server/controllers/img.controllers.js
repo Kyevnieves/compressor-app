@@ -1,8 +1,8 @@
 import { uploadImage } from "../libs/cloudinary.js";
 import fs from 'fs-extra'
 import sharp from 'sharp'
-import {dirname} from '../public/converted/index.js'
-
+import {dirname, __dirname } from '../public/converted/index.js'
+console.log(__dirname)
 
 const eliminarExtension = (string)=>{
   let partsOfString = string.split('.')
