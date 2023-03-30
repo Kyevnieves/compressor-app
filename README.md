@@ -7,6 +7,7 @@ File Uploader
 Bcrypt
 JWT
 Cloudinary
+MongoDB
 Cookie para la sesión
 Instalación
 npm install
@@ -18,6 +19,7 @@ CLOUDINARY_CLOUD_NAME=<nombre del cloudinary cloud>
 CLOUDINARY_API_KEY=<api key de cloudinary>
 CLOUDINARY_API_SECRET=<api secret de cloudinary>
 JWT_SECRET=<clave secreta para jwt>
+MONGODB_URI=<MONGO DB URI>
 Configuración de File Uploader
 En el archivo config.js se deben establecer las configuraciones de File Uploader:
 
@@ -33,6 +35,6 @@ La aplicación permitirá al usuario subir una imagen y comprimirla utilizando l
 La aplicación requerirá que el usuario inicie sesión con un nombre de usuario y contraseña válidos. El servidor generará y enviará un token JWT al cliente para su posterior autenticación en las solicitudes posteriores.
 
 La sesión del usuario se maneja utilizando cookies.
-
+Los usuarios se guardan en una BD mongo
 Contribuir
 Si desea contribuir a este proyecto, no dude en enviar una solicitud de extracción. Estaré encantado de revisar y fusionar cualquier adición útil.
