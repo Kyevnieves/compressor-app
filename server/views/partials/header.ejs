@@ -1,0 +1,16 @@
+<header class="flex mx-12 justify-between items-center">
+		<h1 class="text-3xl py-6 text-slate-700">optimiza<strong class="text-3xl py-6 text-blue-800 font-bold">T</strong></h1>
+
+		<% if (userInfo != null) { %>
+		<div class="user flex items-center gap-4">
+			<h2 class="font-bold text-blue-800 text-md">Hola, <%= userInfo.username %></h2>
+			<a href="/logout"><button class="px-4 py-2 bg-slate-400 hover:bg-slate-500 transition-all ease-in-out duration-300 rounded-md text-white font-bold">Cerrar sesión</button></a>
+		</div>
+
+		<% } else { %>
+		<div class="user">
+			<a href="/signup"><button class="px-4 py-2 bg-slate-400 hover:bg-slate-500 transition-all ease-in-out duration-300 rounded-md text-white font-bold">Registrarse</button></a>
+			<a href="/signin"><button class="px-4 py-2 bg-blue-700 hover:bg-blue-800 transition-all ease-in-out duration-300 rounded-md text-white font-bold">Iniciar sesión</button></a>
+		</div>
+		<% } %>
+</header>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head'); %>
+<body class="w-full">
+	<%- include('./partials/header'); %>
+	<div class="container mx-auto mt-12">
+		<h2 class="text-center text-sm lg:text-3xl">Cloud File <strong class="text-blue-800">Converter</strong> and <strong class="text-blue-800">Compressor</strong></h2>
+		<p class="text-slate-700 text-md px-14 py-6 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.</p>
+		<form method="POST" action="/convertwebp50" enctype="multipart/form-data" class="mx-auto">
+			<input type="file" name="image" class="inputFile">
+
+			<div class="cta bg-slate-100 w-10/12 mx-auto py-32 rounded-xl bg-opacity-50 w-full shadow-md">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 mx-auto mb-6 cursor-pointer fileUploadButton">
+				  <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+				</svg>
+				<h2 class="text-gray-500 text-md text-center">Click para procesar una imagen</h2>
+				<h1 class="text-slate-700 text-md text-center my-2 filename"></h1>
+				<div class="flex justify-center my-4">
+					<button type="button" class="px-4 py-2 bg-blue-700 rounded-md text-white font-bold convert-button disabled:bg-blue-400 hover:bg-blue-600 transition-all ease-in-out duration-300" disabled="">Iniciar</button>
+				</div>
+				<div class="options mx-auto w-6/12">
+					<label for="format">Convertir a</label>
+					<select name="format" class="p-4 bg-transparent font-bold text-blue-600 format mr-4">
+						<option class="text-gray-800" value="jpeg">Jpg</option>
+						<option class="text-gray-800" value="png">Png</option>
+						<option class="text-gray-800" value="webp">Webp</option>
+						<option class="text-gray-800" value="avif">Avif</option>
+					</select>
+
+					<label for="quality">Calidad</label>
+					<select name="quality" class="p-4 bg-transparent font-bold text-blue-600 quality ml-4">
+						<option class="text-gray-800" value="100">100%</option>
+						<option class="text-gray-800" value="80">80%</option>
+						<option class="text-gray-800" value="60">60%</option>
+						<option class="text-gray-800" value="40">40%</option>
+						<option class="text-gray-800" value="20">20%</option>
+					</select>
+
+					<label for="resolution" class="ml-8">Resolución</label>
+					<select name="resolution" class="p-4 bg-transparent font-bold text-blue-600 resolution">
+						<option class="text-gray-800" value="1">100%</option>
+						<option class="text-gray-800" value="0.75">75%</option>
+						<option class="text-gray-800" value="0.50">50%</option>
+						<option class="text-gray-800" value="0.25">25%</option>
+					</select>
+				</div>
+			</div>		
+		</form>
+
+		<div class="uploaded-image bg-blue-50 w-10/12 mx-auto my-4 flex flex-col gap-4 rounded-xl shadow-md">
+			<div class="header flex justify-between px-8 py-4 mx-6 my-4">
+				<h2 class="text-sm text-gray-800">Nombre</h2>
+				<h2 class="text-sm text-gray-800">Antes</h2>
+				<h2 class="text-sm text-gray-800">Despues</h2>
+				<h2 class="text-sm text-gray-800">Opciones</h2>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="/scripts/index.js"></script>
+</body>
+
+</html>

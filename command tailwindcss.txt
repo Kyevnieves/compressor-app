@@ -1,0 +1,1 @@
+npx tailwindcss -i ./server/views/input.css -o ./server/public/css/output.css --watch
