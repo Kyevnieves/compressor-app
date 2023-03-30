@@ -30,7 +30,7 @@ npm run start
 Abrir un navegador web y visitar:
 
 http://localhost:4000/
-La aplicación permitirá al usuario subir una imagen y comprimirla utilizando la biblioteca Sharp. La imagen comprimida se cargará en Cloudinary y se almacenará en el disco duro en la ruta especificada en la configuración de File Uploader.
+La aplicación permitirá al usuario subir una imagen y comprimirla utilizando la biblioteca Sharp. La imagen comprimida se cargará en Cloudinary y se eliminara del disco duro el archivo temporal (para no almacenar imagenes en nuestro servicio).
 
 La aplicación requerirá que el usuario inicie sesión con un nombre de usuario y contraseña válidos. El servidor generará y enviará un token JWT al cliente para su posterior autenticación en las solicitudes posteriores.
 
