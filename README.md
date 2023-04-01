@@ -1,4 +1,8 @@
 # compressor-app
+
+Live Preview
+https://compressor-app.onrender.com/
+
 Aplicación de Compresión de Imágenes
 Aplicación web para comprimir imágenes utilizando las siguientes tecnologías:
 
